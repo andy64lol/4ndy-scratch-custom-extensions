@@ -16,7 +16,7 @@ To use the 4ndy Scratch Custom Extensions, follow these steps:
 4. Add the `.js` file to your project as a custom extension.
 5. Start using the custom blocks within your Scratch project!
 
-For more details on how to add custom extensions to Scratch, you can refer to the [official Scratch extension documentation](https://www.scratch.mit.edu/).
+For more details on how to add custom extensions to Scratch, you can refer to the [Unofficial scratch custom extension documentation of Turbowarp](https://docs.turbowarp.org/development/extensions/introduction).
 
 ## License
 
