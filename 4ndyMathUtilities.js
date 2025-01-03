@@ -33,6 +33,21 @@ class FourndyMathUtilities {
           }
         },
         {
+          opcode: 'randomInt',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Random integer between [MIN] and [MAX]',
+          arguments: {
+            MIN: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 1
+            },
+            MAX: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 10
+            }
+          }
+        },
+        {
           opcode: 'eConstant',
           blockType: Scratch.BlockType.REPORTER,
           text: 'Euler\'s number (e)',
@@ -185,54 +200,6 @@ class FourndyMathUtilities {
               defaultValue: 3
             }
           }
-        },
-        {
-          opcode: 'average',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'Average of [NUM1] and [NUM2]',
-          arguments: {
-            NUM1: {
-              type: Scratch.ArgumentType.NUMBER,
-              defaultValue: 5
-            },
-            NUM2: {
-              type: Scratch.ArgumentType.NUMBER,
-              defaultValue: 10
-            }
-          }
-        },
-        {
-          opcode: 'isOdd',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'Is [NUM] odd?',
-          arguments: {
-            NUM: {
-              type: Scratch.ArgumentType.NUMBER,
-              defaultValue: 3
-            }
-          }
-        },
-        {
-          opcode: 'isEven',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'Is [NUM] even?',
-          arguments: {
-            NUM: {
-              type: Scratch.ArgumentType.NUMBER,
-              defaultValue: 4
-            }
-          }
-        },
-        {
-          opcode: 'decimalPlaces',
-          blockType: Scratch.BlockType.REPORTER,
-          text: 'Number of decimal places in [NUM]',
-          arguments: {
-            NUM: {
-              type: Scratch.ArgumentType.NUMBER,
-              defaultValue: 3.14159
-            }
-          }
         }
       ]
     };
@@ -244,6 +211,10 @@ class FourndyMathUtilities {
 
   sqrt(args) {
     return Math.sqrt(args.NUM);
+  }
+
+  randomInt(args) {
+    return Math.floor(Math.random() * (args.MAX - args.MIN + 1)) + args.MIN;
   }
 
   eConstant() {
@@ -317,22 +288,6 @@ class FourndyMathUtilities {
 
   isGreaterThanOrEqual(args) {
     return args.NUM1 >= args.NUM2;
-  }
-
-  average(args) {
-    return (args.NUM1 + args.NUM2) / 2;
-  }
-
-  isOdd(args) {
-    return args.NUM % 2 !== 0;
-  }
-
-  isEven(args) {
-    return args.NUM % 2 === 0;
-  }
-
-  decimalPlaces(args) {
-    return (args.NUM.toString().split('.')[1] || []).length;
   }
 }
 
