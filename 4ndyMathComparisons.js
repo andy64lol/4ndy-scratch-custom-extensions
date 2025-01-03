@@ -105,6 +105,81 @@ class FourndyMathComparisons {
               defaultValue: 7
             }
           }
+        },
+        {
+          opcode: 'isAbs',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'Is [NUM1] abs of [NUM2]?',
+          arguments: {
+            NUM1: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 5
+            },
+            NUM2: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: -5
+            }
+          }
+        },
+        {
+          opcode: 'isCos',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'Is [NUM1] cos of [NUM2]?',
+          arguments: {
+            NUM1: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 0.5
+            },
+            NUM2: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: Math.PI / 3
+            }
+          }
+        },
+        {
+          opcode: 'isTan',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'Is [NUM1] tan of [NUM2]?',
+          arguments: {
+            NUM1: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: Math.sqrt(3)
+            },
+            NUM2: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: Math.PI / 3
+            }
+          }
+        },
+        {
+          opcode: 'isSin',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'Is [NUM1] sin of [NUM2]?',
+          arguments: {
+            NUM1: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 0.5
+            },
+            NUM2: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: Math.PI / 6
+            }
+          }
+        },
+        {
+          opcode: 'isSqrt',
+          blockType: Scratch.BlockType.BOOLEAN,
+          text: 'Is [NUM1] sqrt of [NUM2]?',
+          arguments: {
+            NUM1: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 2
+            },
+            NUM2: {
+              type: Scratch.ArgumentType.NUMBER,
+              defaultValue: 4
+            }
+          }
         }
       ]
     };
@@ -154,7 +229,26 @@ class FourndyMathComparisons {
   isOdd(args) {
     return args.NUM % 2 !== 0;
   }
+
+  isAbs(args) {
+    return Math.abs(args.NUM2) === args.NUM1;
+  }
+
+  isCos(args) {
+    return Math.cos(args.NUM2) === args.NUM1;
+  }
+
+  isTan(args) {
+    return Math.tan(args.NUM2) === args.NUM1;
+  }
+
+  isSin(args) {
+    return Math.sin(args.NUM2) === args.NUM1;
+  }
+
+  isSqrt(args) {
+    return Math.sqrt(args.NUM2) === args.NUM1;
+  }
 }
 
 Scratch.extensions.register(new FourndyMathComparisons());
-  
