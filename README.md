@@ -18,10 +18,17 @@ To use the 4ndy Scratch Custom Extensions, follow these steps:
 
 For more details on how to add custom extensions to Scratch, you can refer to the [Unofficial scratch custom extension documentation of Turbowarp](https://docs.turbowarp.org/development/extensions/introduction).
 
+## Reminder
+
+You are reminded to read each of our documentation about the extension file before downloading it and using it if there is one,if you have any feedbacks or suggestions on the project, please contact the following emails:
+
+andy64lolxd@gmail.com (primary)
+andy64lol@outlook.com(secondary)
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Author
 
-This project was created by [Andy64lol](https://github.com/andy64lol).
+This project was created by [Andy64lol](https://github.com/andy64lol),a lazy student who never sleeps...ZZZZZZZZ...
