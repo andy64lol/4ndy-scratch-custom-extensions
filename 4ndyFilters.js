@@ -103,7 +103,7 @@ class FourndyFilters {
   'twatwaffle', 'shitbubble', 'cockflicker', 'asshollow', 'fartface', 'cumwipe', 'buttclown',
   'craplicker', 'douchemonkey', 'dickjuice', 'asswipe', 'fuckchop', 'shitrag', 'asssmear',
   'cockwhore', 'faggotbucket', 'bitchdick', 'fartshovel', 'cockwaffle', 'fuckstain', 'shitass',
-  'cumtard', 'twatface', 'buttfucker', 'cocknozzle', 'shitshoveler', 'twatmoose', 'assmoose','dick','penis','vagina','cum','succubus','dumb','dumbass','pee','gacha heat','gacha heat','catboy','gay','g4y','lesbian'
+  'cumtard', 'twatface', 'buttfucker', 'cocknozzle', 'shitshoveler', 'twatmoose', 'assmoose','dick','penis','vagina','cum','succubus','dumb','dumbass','pee','gacha heat','gacha heat','catboy','gay','g4y','lesbian','l3sbian','LGTB','communisn','stalin','porn','pornhub','hentai'
     ];
   }
 
