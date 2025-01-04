@@ -85,7 +85,25 @@ class FourndyFilters {
       'sultry women', 'swastika', 'swinger', 'tainted love', 'taste my', 'tea bagging', 
       'threesome', 'throating', 'thumbzilla', 'tied up', 'tight white', 'tit', 'tits', 
       'titties', 'titty', 'tongue in a', 'topless', 'tosser', 'towelhead', 'tranny', 
-      'tribadism', 'tub girl', 'tubgirl', 'tushy', 'twat', 'twink', 'twink'
+      'tribadism', 'tub girl', 'tubgirl', 'tushy', 'twat', 'twink', 'twink',
+  'bastards', 'bastardo', 'whoremonger', 'assclown', 'fucktard', 'cumdumpster',
+  'cocksniffer', 'smeghead', 'fuckface', 'cockwomble', 'turdlicker', 'shithole',
+  'cockblock', 'shithead', 'cumshot', 'jizzrag', 'bitchass', 'assmunch', 'pisshead',
+  'shitbrick', 'twathead', 'prickish', 'testiclehead', 'skankhole', 'douchecanoe',
+  'fuckwit', 'dickwad', 'cocksucker', 'pisspig', 'asswipe', 'bastardized', 'ballbag',
+  'turdface', 'fuckface', 'assclown', 'skumbag', 'dicknose', 'cocklicker', 'cockblock',
+  'moronic', 'shitlicker', 'douchebaggy', 'knobhead', 'craphead', 'poopstain', 'cockroach','asshat', 'buttfuck', 'dickface', 'pussypass', 'fartknocker', 'shitwhore', 'nutslapper',
+  'clitlicker', 'cockknocker', 'cumwhore', 'cockpuncher', 'bitchwhore', 'douchelord', 'buttplug',
+  'cockslap', 'shitstain', 'cocksniffer', 'cumguzzler', 'dickflick', 'turdlicker', 'dickbag', 
+  'bitchy', 'buttlicker', 'shithappens', 'pissflap', 'faggotized', 'testiclehead', 'asshump',
+  'cumguzzling', 'wetwhore', 'shithead', 'bustyass', 'cockknocker', 'ballslap', 'assbiscuit',
+  'cockbitch', 'twatlicker', 'suckass', 'buttface', 'pisswhore', 'dickbubble', 'cocksucker',
+  'shitbucket', 'faggotbrain', 'bitchwad', 'dickbrain', 'bitchface', 'cuntbrain', 'pissbrain',
+  'cockhead', 'buttwhore', 'fuckbucket', 'assgoblin', 'cockweasel', 'bastardhole', 'poopnugget',
+  'twatwaffle', 'shitbubble', 'cockflicker', 'asshollow', 'fartface', 'cumwipe', 'buttclown',
+  'craplicker', 'douchemonkey', 'dickjuice', 'asswipe', 'fuckchop', 'shitrag', 'asssmear',
+  'cockwhore', 'faggotbucket', 'bitchdick', 'fartshovel', 'cockwaffle', 'fuckstain', 'shitass',
+  'cumtard', 'twatface', 'buttfucker', 'cocknozzle', 'shitshoveler', 'twatmoose', 'assmoose','dick','penis','vagina','cum','succubus','dumb','dumbass','pee','gacha heat','gacha heat','catboy','gay','g4y','lesbian'
     ];
   }
 
