@@ -1,0 +1,63 @@
+class FourndyFilters {
+  constructor() {
+    this.filterList = [
+      'stupid', 'dumb', 'idiot', 'hate', 'moron', 'fool', 'jerk', 
+      'dummy', 'loser', 'ignorant', 'pig', 'scumbag', 'lame', 
+      'useless', 'retarded', 'asshole', 'bitch', 'crap', 'suck', 
+      'shit', 'bastard', 'dick', 'twat', 'prick', 'douchebag', 
+      'fuck', 'cunt', 'bastards', 'whore', 'slut', 'ass', 'bastard', 
+      'wanker', 'chode', 'cock', 'pussy', 'bitchass', 'douche', 
+      'piss', 'scum', 'shut up', 'crybaby', 'turd', 'faggot', 'retard', 
+      'nigger', 'chink', 'spic', 'wetback', 'kraut', 'gook', 'raghead', 
+      'kike', 'nazi', 'redneck', 'beaner', 'tramp', 'slimeball', 
+      'bitchy', 'hypocrite', 'asshat', 'cockroach', 'shithead', 'dipshit',
+      'fuckhead', 'twathead', 'shithole', 'douchecanoe', 'turdface', 
+      'jerkface', 'asswipe', 'ballbag', 'fucktard', 'whoremonger', 'prickface', 
+      'dickhead', 'slutty', 'cockblock', 'skank', 'prickish', 'shitstain', 
+      'douchebaggy', 'retardation', 'cumdumpster', 'manwhore', 'bitchface', 
+      'assclown', 'smeghead', 'cocksucker', 'shitbrick', 'fuckwit', 'moronic', 
+      'turdbrain', 'skankhole', 'whorebag', 'assmunch', 'buttfuck', 'cumwhore', 
+      'dickwad', 'testiclehead', 'freaking', 'jackass', 'wanksta', 'cuntface', 
+      'ballsucker', 'turdlicker', 'twatsucker', 'fuckface', 'bootlicker', 
+      'motherfucker', 'cocksniffer', 'assfuck', 'cocklicker', 'shitlicker', 
+      'shitwhore', 'jizzrag', 'cockwomble', 'fartknocker', 'shithappens', 
+      'knobhead', 'flaps', 'shag', 'buttplug', 'bootyhole', 'skumbag', 'dickhead', 
+      'cuntlord', 'wank', 'muncher', 'spunk', 'turdburger', 'bongwater', 
+      'assbiscuit', 'twinkie', 'blowjob', 'fap', 'dicknose', 'shithead',
+      'beat', 'kill', 'rape', 'fuck', 'stab', 'destroy', 'smash', 
+      'hurt', 'abuse', 'bully', 'torture', 'maim', 'slaughter', 'murder', 
+      'beat up', 'attack', 'molest', 'slap', 'punch', 'choke', 'piss on', 
+      'stalk', 'scare', 'insult', 'harass', 'defile', 'humiliate', 'punish', 
+      'disgrace', 'demoralize', 'demean', 'mock', 'tease', 'abandon', 
+      'neglect', 'annoy', 'exploit', 'destroy', 'violence', 'abduct'
+    ];
+  }
+
+  getInfo() {
+    return {
+      id: '4ndyFilters',
+      name: '4ndy Filters',
+      blocks: [
+        {
+          opcode: 'filterMessage',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Filter message [MESSAGE]',
+          arguments: {
+            MESSAGE: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'Hello, you are stupid'
+            }
+          }
+        }
+      ]
+    };
+  }
+
+  filterMessage(args) {
+    const message = args.MESSAGE;
+    const regex = new RegExp(`\\b(${this.filterList.join('|')})\\b`, 'gi');
+    return message.replace(regex, '****');
+  }
+}
+
+Scratch.extensions.register(new FourndyFilters());
