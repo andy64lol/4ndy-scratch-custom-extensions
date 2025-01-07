@@ -20,7 +20,7 @@ For more details on how to add custom extensions to Scratch, you can refer to th
 
 ## Reminder
 
-You are reminded to read each of our documentation about the extension file before downloading it and using it if there is one,if you have any feedbacks or suggestions on the project, please contact the following emails:
+You are reminded to read each of our documentation about the extension file before downloading it and using it **only if there is one**,if you have any feedbacks or suggestions on the project, please contact the following emails:
 
 andy64lolxd@gmail.com (primary)
 andy64lol@outlook.com(secondary)
