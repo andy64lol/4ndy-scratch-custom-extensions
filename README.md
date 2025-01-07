@@ -10,10 +10,10 @@ The **4ndy Scratch Custom Extensions** project provides custom Scratch blocks th
 
 To use the 4ndy Scratch Custom Extensions, follow these steps:
 
-1. Go to the [Penguin Mod website](https://penguinmod.com) to access the platform.
-2. Download the raw `.js` file for the extension you want to use. You can find the raw file links in the corresponding extension section of the project.
+1. Go to the [Turbowarp website](https://turbowarp.org/) to access the platform.
+2. Download the raw `.js` file for the extension you want to use. You can find the raw files above.
 3. Once you've downloaded the file, open your Scratch project.
-4. Add the `.js` file to your project as a custom extension.
+4. Add the `.js` file to your project as a custom extension,choose unsandboxed.
 5. Start using the custom blocks within your Scratch project!
 
 For more details on how to add custom extensions to Scratch, you can refer to the [Unofficial scratch custom extension documentation of Turbowarp](https://docs.turbowarp.org/development/extensions/introduction).
