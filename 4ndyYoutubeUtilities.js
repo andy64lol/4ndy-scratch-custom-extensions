@@ -5,6 +5,9 @@ class FourndyYouTubeUtilities {
     this.currentVideoName = '';
     this.isPlaying = false;
     this.isShort = false;
+    this.likes = 0;
+    this.comments = 0;
+    this.apiKey = ''; // Store the API key
   }
 
   getInfo() {
@@ -102,6 +105,22 @@ class FourndyYouTubeUtilities {
           color3: '#B30000'
         },
         {
+          opcode: 'getYouTubeLikes',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Likes on YouTube video',
+          color1: '#FF0000',
+          color2: '#FF4D4D',
+          color3: '#B30000'
+        },
+        {
+          opcode: 'getYouTubeComments',
+          blockType: Scratch.BlockType.REPORTER,
+          text: 'Comments on YouTube video',
+          color1: '#FF0000',
+          color2: '#FF4D4D',
+          color3: '#B30000'
+        },
+        {
           opcode: 'isVideoPlaying',
           blockType: Scratch.BlockType.BOOLEAN,
           text: 'Is video playing?',
@@ -124,6 +143,20 @@ class FourndyYouTubeUtilities {
           color1: '#FF0000',
           color2: '#FF4D4D',
           color3: '#B30000'
+        },
+        {
+          opcode: 'setYouTubeAPIKey',
+          blockType: Scratch.BlockType.COMMAND,
+          text: 'Set YouTube API key to [APIKEY]',
+          arguments: {
+            APIKEY: {
+              type: Scratch.ArgumentType.STRING,
+              defaultValue: 'YOUR_API_KEY'
+            }
+          },
+          color1: '#FF0000',
+          color2: '#FF4D4D',
+          color3: '#B30000'
         }
       ]
     };
@@ -135,6 +168,7 @@ class FourndyYouTubeUtilities {
     this.currentVideoName = `YouTube Video ID: ${args.VIDEOID}`;
     this.isPlaying = true;
     this.isShort = false;
+    this.fetchLikesAndComments(args.VIDEOID); // Fetch likes and comments
     this.loadIframe(url);
   }
 
@@ -144,6 +178,7 @@ class FourndyYouTubeUtilities {
     this.currentVideoName = `YouTube Short ID: ${args.SHORTID}`;
     this.isPlaying = true;
     this.isShort = true;
+    this.fetchLikesAndComments(args.SHORTID); // Fetch likes and comments
     this.loadIframe(url);
   }
 
@@ -178,6 +213,14 @@ class FourndyYouTubeUtilities {
     return this.currentVideoName || 'No video name available';
   }
 
+  getYouTubeLikes() {
+    return this.likes || 0; // Return likes count
+  }
+
+  getYouTubeComments() {
+    return this.comments || 0; // Return comments count
+  }
+
   isVideoPlaying() {
     return this.isPlaying && !this.isShort;
   }
@@ -188,6 +231,24 @@ class FourndyYouTubeUtilities {
 
   isExtensionWorking() {
     return true;
+  }
+
+  fetchLikesAndComments(videoId) {
+    if (!this.apiKey) {
+      console.error('API key is not set!');
+      return;
+    }
+
+    // Example placeholder for API call to get likes and comments
+    fetch(`https://www.googleapis.com/youtube/v3/videos?part=statistics&id=${videoId}&key=${this.apiKey}`)
+      .then(response => response.json())
+      .then(data => {
+        if (data.items && data.items.length > 0) {
+          this.likes = data.items[0].statistics.likeCount || 0;
+          this.comments = data.items[0].statistics.commentCount || 0;
+        }
+      })
+      .catch(error => console.error('Error fetching YouTube stats:', error));
   }
 
   loadIframe(url) {
@@ -213,6 +274,11 @@ class FourndyYouTubeUtilities {
 
     this.iframeContainer.appendChild(iframe);
     document.body.appendChild(this.iframeContainer);
+  }
+
+  setYouTubeAPIKey(args) {
+    this.apiKey = args.APIKEY;
+    console.log('API key set:', this.apiKey); // Optional logging to confirm the key is set
   }
 }
 
