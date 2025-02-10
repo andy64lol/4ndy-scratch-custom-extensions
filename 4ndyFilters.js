@@ -7,17 +7,17 @@ class FourndyFilters {
     try {
       const response = await fetch(`https://api.detectlanguage.com/0.2/detect?q=${encodeURIComponent(message)}`, {
         headers: {
-          'Authorization': 'Bearer YOUR_API_KEY' // Make sure to replace with actual API key
+          'Authorization': 'Bearer YOUR_API_KEY' 
         }
       });
       const data = await response.json();
       if (data && data.data && data.data.detections && data.data.detections.length > 0) {
         return data.data.detections[0].language;
       }
-      return 'en'; // default to English if no language is detected
+      return 'en'; 
     } catch (error) {
       console.error('Language detection failed:', error);
-      return 'en'; // default to English in case of failure
+      return 'en'; 
     }
   }
 
@@ -25,25 +25,25 @@ class FourndyFilters {
     try {
       const response = await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(message)}&langpair=auto|${targetLang}`, {
         headers: {
-          'X-RapidAPI-Key': '8cb9e694bceb7b0f5b16badfa802ecad' // Ensure your API key is correct
+          'X-RapidAPI-Key': '8cb9e694bceb7b0f5b16badfa802ecad' 
         }
       });
       const data = await response.json();
       if (data && data.responseData && data.responseData.translatedText) {
         return data.responseData.translatedText;
       }
-      return message; // return original message if translation fails
+      return message; 
     } catch (error) {
       console.error('Translation failed:', error);
-      return message; // return original message in case of failure
+      return message; 
     }
   }
 
   async fetchBadWords() {
     try {
-      const response = await fetch('https://raw.githubusercontent.com/andy64lol/improved-doodle/refs/heads/main/librarybadwords.json');
+      const response = await fetch('https://raw.githubusercontent.com/andy64lol/4ndyJSONLibraries/refs/heads/main/librarybadwords.json');
       const data = await response.json();
-      return data || { badWordsList: [], regexList: [] }; // return empty lists if data is invalid
+      return data || { badWordsList: [], regexList: [] }; 
     } catch (error) {
       console.error('Failed to fetch bad words:', error);
       return { badWordsList: [], regexList: [] }; // return empty lists in case of failure
