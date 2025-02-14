@@ -8,59 +8,52 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f4f4f4;
+            background-color: #0a0a0a;
+            color: #00eaff;
             margin: 0;
             padding: 20px;
         }
         h2 {
-            color: #333;
-            margin-bottom: 15px;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-shadow: 0px 0px 12px #00eaff;
         }
         .download-container {
             display: flex;
-            gap: 10px;
-            overflow-x: auto;
-            padding: 10px;
-            white-space: nowrap;
-            justify-content: start;
-            scroll-behavior: smooth;
-            border-radius: 10px;
-            background: white;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .download-container::-webkit-scrollbar {
-            height: 8px;
-        }
-        .download-container::-webkit-scrollbar-thumb {
-            background: #008CBA;
-            border-radius: 5px;
-        }
-        .download-container::-webkit-scrollbar-track {
-            background: #ddd;
-            border-radius: 5px;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            max-width: 400px;
+            margin: auto;
         }
         .download-container a {
             text-decoration: none;
+            width: 100%;
         }
         button {
-            background-color: #008CBA;
-            color: white;
-            padding: 10px 15px;
-            border: none;
+            background-color: transparent;
+            color: #00eaff;
+            padding: 12px 18px;
+            border: 2px solid #00eaff;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 16px;
+            font-weight: bold;
             border-radius: 8px;
-            transition: background 0.3s ease;
-            white-space: nowrap;
+            width: 100%;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 0 12px rgba(0, 234, 255, 0.5);
         }
         button:hover {
-            background-color: #005f73;
+            background-color: #00eaff;
+            color: #0a0a0a;
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.9);
+            transform: scale(1.05);
         }
     </style>
 </head>
 <body>
 
-    <h2>Download 4ndyScratchExtensions JavaScript Files</h2>
+    <h2>Download 4ndyScratchExtensions</h2>
     <div class="download-container" id="downloads"></div>
 
     <script>
@@ -82,7 +75,7 @@
             link.ariaLabel = `Download ${file}`;
 
             const button = document.createElement("button");
-            button.textContent = file.replace(".js", ""); 
+            button.textContent = file.replace(".js", ""); // Cleaner button text
 
             link.appendChild(button);
             container.appendChild(link);
